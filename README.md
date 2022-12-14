@@ -28,3 +28,8 @@ The data also tested in Resnet50 pretrained model with same hyperparameter for t
 |SSD Mobile Net V2|2|0.071015|0.233|1.032|
 |SSD Resnet50 V1|8|0.0838|0.225|0.9718|
 
+From the table above, we can see that The smaller the batch size value, the higher the loss is obtained. However, this does not imply that a large loss can obtain a better model that is adapted to the dataset's conditions and the amount of memory used. Because the dataset, in this case, is quite complex, choosing a batch size that is small enough can save memory allocation while also producing better convergence. While a batch size of fewer than 8 results in lower loss and accuracy, a batch size of 8 is the ideal batch size value in this model. Compared to the Resnet50 V1 model, the total loss seems to be lower than Mobilenet V2, but also a lower mAP as well. In this case, SSD Mobile V2 is more considered to implement in real-time condition due to the lightweigth and compatible to be inferenced in hardware.
+
+### The Output
+<img src="https://user-images.githubusercontent.com/87270138/207591976-38859307-4f74-4dbc-a71d-ea20684d0a2f.PNG" width=50% height=50%>
+The road damage is detected as pothole (L00 label)
