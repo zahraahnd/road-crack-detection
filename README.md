@@ -33,3 +33,5 @@ From the table above, we can see that The smaller the batch size value, the high
 ### The Output
 <img src="https://user-images.githubusercontent.com/87270138/207591976-38859307-4f74-4dbc-a71d-ea20684d0a2f.PNG" width=50% height=50%>
 The road damage is detected as pothole (L00 label)
+
+The post processing data to extract the prediction result from inference into the calculation process to get the real size of object & defining the level of road damage with streamlit integration for visualization will be explained in another repo
