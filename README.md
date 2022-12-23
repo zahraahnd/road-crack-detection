@@ -31,8 +31,14 @@ The data also tested in Resnet50 pretrained model with same hyperparameter for t
 From the table above, we can see that The smaller the batch size value, the higher the loss is obtained. However, this does not imply that a large loss can obtain a better model that is adapted to the dataset's conditions and the amount of memory used. Because the dataset, in this case, is quite complex, choosing a batch size that is small enough can save memory allocation while also producing better convergence. While a batch size of fewer than 8 results in lower loss and accuracy, a batch size of 8 is the ideal batch size value in this model. Compared to the Resnet50 V1 model, the total loss seems to be lower than Mobilenet V2, but also a lower mAP as well. In this case, SSD Mobile V2 is more considered to implement in real-time condition due to the lightweigth and compatible to be inferenced in hardware.
 
 ### The Output
-<img src="https://user-images.githubusercontent.com/87270138/207591976-38859307-4f74-4dbc-a71d-ea20684d0a2f.PNG" width=50% height=50%>
-The road damage is detected as pothole (L00 label)
+- Validation result -- Detected as pothole (L00 label)
+<img src="https://user-images.githubusercontent.com/87270138/207591976-38859307-4f74-4dbc-a71d-ea20684d0a2f.PNG" width=30% height=30%>
+
+- Inference result in real condition
+
+<img src="https://user-images.githubusercontent.com/87270138/209289124-1cca4894-ff8e-4424-8ad9-ca54ade135e8.jpg" width=25% height=25%><img src="https://user-images.githubusercontent.com/87270138/209289249-0c24c859-1588-45d4-a89e-996e740a8724.jpg" width=25% height=25%>
+
+<img src="https://user-images.githubusercontent.com/87270138/209289320-6ad0b737-48f8-4561-aa6b-dc5c304423fd.jpg" width=25% height=25%><img src="https://user-images.githubusercontent.com/87270138/209289335-8788ecaf-51f5-45b7-a987-b0170ee49087.jpg" width=25% height=25%>
 
 ___
-The post processing data to extract the prediction result from inference into the calculation process to get the real size of object & defining the level of road damage with streamlit integration for visualization will be explained in another repo
+The trained model is embedded in Jetson Nano with USB Coral Accelerator. The testing process is carried out on a 1 km road by taking pictures using the HD Car View Camera. The detailed information about hardware implementation will not be discussed here, otherwise, we focused more on the post-processing data to extract the prediction result from inference into the calculation process to get the real size of object & defining the level of road damage with streamlit integration for visualization in the next part HERE. 
